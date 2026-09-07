@@ -26,7 +26,7 @@ const NAV: { id: Tab; label: string; icon: typeof CalendarDays }[] = [
 export default function Index() {
   const [data, setData] = useState<ClinicData>(() => loadData());
   const [tab, setTab] = useState<Tab>('agenda');
-  const [mode, setMode] = useState<'day' | 'week'>('week');
+  const [mode, setMode] = useState<'day' | 'week' | 'month'>('week');
   const [anchor, setAnchor] = useState<Date>(() => new Date());
   const [dialogOpen, setDialogOpen] = useState(false);
   const [editing, setEditing] = useState<Appointment | null>(null);
